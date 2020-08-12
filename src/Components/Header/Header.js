@@ -18,26 +18,76 @@ class Header extends React.Component {
     returnHome = () => {
         window.location = "/"
     }
+
+    onClickHome = () => {
+        this.setState({
+            home: true,
+            documents: false,
+            services: false,
+            contact: false,
+            photos: false
+        })
+    }
+
+    onClickServices = () => {
+        this.setState({
+            home: false,
+            documents: false,
+            services: true,
+            contact: false,
+            photos: false
+        }) 
+    }
+
+    onClickDocuments = () => {
+        this.setState({
+            home: false,
+            documents: true,
+            services: false,
+            contact: false,
+            photos: false
+        }) 
+    }
+
+    onClickContact = () => {
+        this.setState({
+            home: false,
+            documents: false,
+            services: false,
+            contact: true,
+            photos: false
+        }) 
+    }
+
+    onClickPhotos = () => {
+        this.setState({
+            home: false,
+            documents: false,
+            services: false,
+            contact: false,
+            photos: true
+        }) 
+    }
+
+
+
     
     render() {
-
-
         return(
             <div className='top'>
                 <h1 onClick={this.returnHome} className='logo'>CTF Data Pro</h1>
 
                 <div className='navBar'>
 
-                    <Link id='Home' to='/'>Home</Link>
+                    {this.state.home ? <Link onClick={this.onClickHome} className='outline clicked' to='/'>Home</Link> : <Link onClick={this.onClickHome} to='/'>Home</Link>}
 
-                    <Link id='Services' to='/services'>Services</Link>
+                    {this.state.services ? <Link onClick={this.onClickServices} className='outline clicked' to='/services'>Services</Link> : <Link onClick={this.onClickServices} to='/services'>Services</Link>}
 
-                    <Link id='Documents' to='/documents'>Documents</Link>
+                    {this.state.documents ? <Link onClick={this.onClickDocuments} className='outline clicked' to='documents'>Documents</Link> : <Link onClick={this.onClickDocuments} to='documents'>Documents</Link>}
 
-                    <Link id='Contact' to='/contact'>Contact</Link>
+                    {this.state.contact ? <Link onClick={this.onClickContact} className='outline clicked' to='/contact'>Contact</Link> : <Link onClick={this.onClickContact} to='/contact'>Contact</Link>}
 
-                    <Link id='Photos' to='/photos'>Photos</Link>
-
+                    {this.state.photos ? <Link onClick={this.onClickPhotos} className='outline clicked' to='/photos'>Photos</Link> : <Link onClick={this.onClickPhotos} to='/photos'>Photos</Link>}
 
                     <div className='animation start-home'></div>
                     
