@@ -27,7 +27,7 @@ class HomePage extends React.Component {
                 <div className='background2'></div>
 
                 <div className='homeText'>
-                    <h2 onClick={this.sectionClick1}>Cell Phone & GPS Forensics</h2>
+                    <h2 className='first' onClick={this.sectionClick1}>Cell Phone & GPS Forensics</h2>
 
                     <div className='line'></div>
 
@@ -39,7 +39,7 @@ class HomePage extends React.Component {
                 </div>
 
                 <div className='background3' id='cellPhone'>
-                    
+
                 </div>
 
                 <div className='background4' id='cellTower'>

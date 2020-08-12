@@ -1,27 +1,26 @@
 .phone {
     position: absolute;
-    top: 175px;
-    width: 700px;
+    top: 210px;
+    width: 51%;
+    height: fixed;
     box-shadow: 0 8px 24px rgba(0,0,0,.2);
 }
 
 
 .background2 {
-    width: 750px;
-    margin-top: 60px;
+    width: 55%;
     background-color: grey;
-    height: 485px;
-    z-index: -1;
+    top: 155px;
+    height: 500px;
     position: absolute;
+    z-index: -1;
 }
 
 .background3 {
     width: 100%;
     height: 700px;
     background-color: #3b668e;
-    z-index: -2;
-    position: absolute;
-    margin-top: 510px;
+
 }
 
 .background4 {
@@ -29,8 +28,6 @@
     height: 550px;
     background-color: white;
     z-index: -2;
-    position: absolute;
-    margin-top: 1210px;
 }
 
 .background5 {
@@ -38,15 +35,14 @@
     height: 550px;
     background-color: #3b668e;
     z-index: -2;
-    position: absolute;
-    margin-top: 1760px;
 }
 
 .homeText {
-    width: 50%;
-    margin-top: 4em;
-    position: absolute;
-    right: 0;
+    width: 45%;
+    margin-top: 9rem;
+    margin-left: 55%;
+    margin-bottom: 144px;
+    margin-right: 0px;
     font-size: 20px;
     font-weight: 300;
 }
