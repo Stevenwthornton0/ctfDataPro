@@ -8,5 +8,51 @@
   font-family: 'Work Sans', sans-serif;
 }
 
+/* Global Styles */ 
 
+/* Ensures a parent element with this class name stretches to the height of floated children */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.primarySection {
+  padding: 120px 0;
+}
+
+.background2 {
+  background-color: gray;
+}
+
+.background3 {
+  background-color: #3b668e;
+  color: white;
+}
+
+.background4 {
+  background-color: white;
+}
+
+.float-left {
+  float: left;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.col-33 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
