@@ -6,6 +6,7 @@
     height: 65px;
     background-color: #3b668e;
     font-weight: 400;
+    z-index: -2;
 }
 
 .logo {
@@ -25,22 +26,55 @@
     justify-content: space-around;
 }
 
+.navBar > .animation {
+    position: absolute;
+    height: 47px;
+    top: 9px;
+    left: 748px;
+    z-index: 0;
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: all .3s ease 0s;
+    pointer-events: none;
+}
+
+.navBar .start-home,a:nth-child(1):hover~.animation {
+    width: 94px;
+    left: 748px;
+}
+
+.navBar .start-services,a:nth-child(2):hover~.animation {
+    width: 115px;
+    left: 870px;
+}
+
+.navBar .start-documents,a:nth-child(3):hover~.animation {
+    width: 143px;
+    left: 1013px;
+}
+
+.navBar .start-contact,a:nth-child(4):hover~.animation {
+    width: 111px;
+    left: 1184px;
+}
+
+.navBar .start-photos,a:nth-child(5):hover~.animation {
+    width: 103px;
+    left: 1323px;
+}
+
 .navBar > a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 10px 15px;
+    padding: 20px 35px;
     font-size: 18px;
-    background-color: #3b668e
+    background-color: #3b668e;
+    z-index: 0;
 }
 
-.outline {
+/* .outline {
     border: 1px solid white;
-}
+    border-radius: 3px;
+} */
 
-.navBar > a:hover {
-    color: #0F3951;
-    border-radius: 2px;
-    transition: ease-in .2s;
-}
 
