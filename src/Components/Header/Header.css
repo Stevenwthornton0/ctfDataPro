@@ -1,0 +1,46 @@
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    height: 65px;
+    background-color: #3b668e;
+    font-weight: 400;
+}
+
+.logo {
+    width: fit-content;
+    padding-top: 14px;
+    margin-left: 30px;
+    font-weight: 600;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navBar > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px 15px;
+    font-size: 18px;
+    background-color: #3b668e
+}
+
+.outline {
+    border: 1px solid white;
+}
+
+.navBar > a:hover {
+    color: #0F3951;
+    border-radius: 2px;
+    transition: ease-in .2s;
+}
+
