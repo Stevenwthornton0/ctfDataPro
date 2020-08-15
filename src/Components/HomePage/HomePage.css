@@ -53,3 +53,79 @@
 .belowImageOffset {
     padding-top: 240px; /* 120px for default padding and another 120px for the offset image */
 }
+
+.container > * {
+    padding: 24px 128px;
+}
+
+.underline {
+    width: 30%;
+    border-bottom: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.underline1 {
+    width: 30%;
+    border-bottom: 1px solid #3b668e;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    /* margin-bottom: 10px; */
+}
+
+.secondarySection {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+}
+
+.secondarySection h3 {
+    font-weight: 500;
+}
+
+ul {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 12px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.phoneWrap2 {
+    position: relative;
+}
+
+.phoneWrap2:before {
+    background-color: gray;
+    content: "";
+    height: 100%;
+    left: 0;
+    max-width: 173.66px; /* max-width of <img> + 50px offset */
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: calc(100% + 50px);
+}
+
+.navImg {
+    width: 170.66px;
+    height: auto;
+    box-shadow: 12px 12px 48px rgba(0,0,0,.35);
+    z-index: 1;
+    display: block; /* Removes the default bottom "margin" that <img> tags have */
+    position: relative; /* Pops the z-index to be above the absolute positioned .phoneWrap:before pseudo-element */
+}
+
+.col-33 h3 {
+    margin-top: 12px;
+    width: 190.66px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3b668e;
+    text-align: center;
+    text-decoration: none;
+}

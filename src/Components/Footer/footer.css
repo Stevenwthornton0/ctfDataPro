@@ -1,6 +1,7 @@
 /* TODO: Remove dummy styling */
-footer {
-  background-color: #f1f1f1;
-  padding: 1rem;
-  text-align: center;
+.footer {
+  background-color: #3b668e;
+  height: 120px;
 }
+
+

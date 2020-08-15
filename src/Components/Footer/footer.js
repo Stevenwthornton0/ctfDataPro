@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './footer.css';
 
 class Footer extends React.Component {
@@ -6,7 +7,8 @@ class Footer extends React.Component {
     render() {
         return (
             <div>
-                <h1>This is an example footer</h1>
+                <p>&#169; 2020 CTF Data Pro Inc.</p>
+                <Link to='/contact'>Contact</Link>
             </div>
         )
     }

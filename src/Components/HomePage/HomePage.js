@@ -1,11 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './HomePage.css';
-import photo from '../../Photos/Phone.jpg'
+import phone from '../../Photos/Phone.jpg';
+import phone2 from '../../Photos/Phone2.jpg';
+import tower from '../../Photos/tower.jpg';
+import password from '../../Photos/Password.png';
+
 
 class HomePage extends React.Component {
 
     sectionClick1 = () => {
-        const elmnt = document.getElementById('cellPhone');
+        const elmnt = document.getElementById('point1');
         elmnt.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
 
@@ -23,10 +28,10 @@ class HomePage extends React.Component {
         return(
             <div className='HomePage'>
 
-                <div class="homeHero primarySection">
+                <div className="homeHero primarySection">
                     
-                    <div class="phoneWrap">
-                        <img className='phone' src={photo} alt="phone"/>
+                    <div className="phoneWrap">
+                        <img className='phone' src={phone} alt="phone"/>
                     </div>
 
                     <div className='homeText'>
@@ -43,32 +48,94 @@ class HomePage extends React.Component {
                 </div>
 
                 <div className='belowImageOffset background3 primarySection' id='cellPhone'>
-                    <div class="container">
-                        <h1>Ooh, what a great section this is!</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac metus tincidunt, eleifend dolor sed, dictum tellus. Integer at interdum orci, nec convallis est. Nullam pretium mi in justo consectetur, id dapibus massa condimentum. Integer feugiat semper nulla, interdum vestibulum nibh porttitor molestie. Ut sed nulla arcu. Vivamus velit purus, ornare non velit eu, tincidunt sodales eros. Curabitur vitae elit molestie, bibendum leo nec, semper orci. Pellentesque sed purus nec neque aliquam blandit. In scelerisque eros vel augue rhoncus placerat. Curabitur diam justo, ullamcorper bibendum sem ac, pretium congue mauris. Nam malesuada mauris neque, eu tempor purus congue ac.</p>
+                    <div className="container">
+                        <h1>Cell Phone & GPS Forensics</h1>
+                        <div className='underline'/>
+                        <p>Our team of skilled Cell Phone Forensics Examiner have a wealth of skills and information to help with your case. We can provide an unbiased, independent analysis of the data on your cell phones and GPS units. We have multiple certifications and utilize multiple programs and systems to retrieve the data including the Cellebrite UFED (Universal Forensic Extraction Device) Logical Unit, the Cellebrite Physical Pro and Susteen SecureView. These systems allow us to access thousands of the cell phones on the market today and many of the GPS units.</p>
+                        <p id='point1'>Some of the data we can extract from cell phones & GPS units can include:</p>
                     </div>
+                    <div className='container secondarySection'>
+                        <div>
+                            <h3>Cell Phones</h3>
+                            <ul>
+                                <li>SMS (text messages)</li>
+                                <li>Pictures</li>
+                                <li>Videos</li>
+                                <li>Contact Lists</li>
+                                <li>Missed Calls</li>
+                                <li>And Much More</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>GPS Forensics</h3>
+                            <ul>
+                                <li>Routes Traveled</li>
+                                <li>Journeys</li>
+                                <li>Saved Searches</li>
+                                <li>Favorite Locations</li>
+                                <li>Date & Time of Travel</li>
+                                <li>Viewable in Google Earth</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
 
                 <div className='background4 primarySection' id='cellTower'>
-                    <div class="container clearfix">
-                        <h2 class="float-left">I like this section even more.</h2>
-                        <h2 class="float-left">Why? Because it has floats?</h2>
+                    <div className="container clearfix">
+                        <h1>Cell Tower Analysis</h1>
+                        <div className='underline1'></div>
+                        <p>Our Cell Tower Analysis services helps you with the task of reviewing the cell tower records and making sense out of something that at times can be very confusing. We can assist in isolating the items that are of use to your case and helping you fit those into the proper perspective.</p>
                     </div>
                 </div>
 
                 <div className='background3 primarySection' id='passwordRec'>
-                    <div class="container">
-                        <h1>This section has three equal columns.</h1>
-                        <div class="row">
-                            <div class="col-33">
-                                <h3>One</h3>
+                    <div className="container">
+                        <h1>Password Recovery</h1>
+                        <div className='underline'></div>
+                        <div className="row">
+                            <div className="col-50">
+                                <p id='bold'>Our Password Recovery services allow us to retrieve passwords for files such as:</p>
+                                <ul>
+                                    <li>Word Documents</li>
+                                    <li>Excel Spreadsheets</li>
+                                    <li>PDF</li>
+                                    <li>QuickBooks Company Files</li>
+                                    <li>and many more</li>
+                                </ul>
                             </div>
-                            <div class="col-33">
-                                <h3>Two</h3>
+                            <div className="col-50">
+                                <p>This can be a life saver to retrieve the data from those files whose passwords have been forgotten or from files that were password protected by employees who have since left the company.</p>
                             </div>
-                            <div class="col-33">
-                                <h3>Three</h3>
-                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='background4 primarySection' id='cellTower'>
+                    <div className="container clearfix row">
+                        <div className='col-33'>
+                            <Link to='/services'>
+                                <div className='phoneWrap2'>
+                                    <img className='navImg' src={phone2}></img>
+                                </div>
+                                <h3>Cell Phone Forensics</h3>
+                            </Link>
+                        </div>
+                        <div className='col-33'>
+                            <Link to='/services'>
+                                <div className='phoneWrap2'>
+                                    <img className='navImg' src={tower}></img>
+                                </div>
+                                <h3>Cell Towers</h3>
+                            </Link>
+                        </div>
+                        <div className='col-33'>
+                            <Link to='/services'>
+                                <div className='phoneWrap2'>
+                                    <img className='navImg' src={password}></img>
+                                </div>
+                                <h3>Password Recovery</h3>
+                            </Link>
                         </div>
                     </div>
                 </div>
