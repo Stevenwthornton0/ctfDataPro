@@ -11,7 +11,7 @@ class HomePage extends React.Component {
 
     sectionClick1 = () => {
         const elmnt = document.getElementById('point1');
-        elmnt.scrollIntoView({behavior: 'smooth', block: 'center'})
+        elmnt.scrollIntoView({behavior: 'smooth', block: 'start'})
     }
 
     sectionClick2 = () => {
@@ -49,10 +49,10 @@ class HomePage extends React.Component {
 
                 <div className='belowImageOffset background3 primarySection' id='cellPhone'>
                     <div className="container">
-                        <h1>Cell Phone & GPS Forensics</h1>
+                        <h1 id='point1'>Cell Phone & GPS Forensics</h1>
                         <div className='underline'/>
                         <p>Our team of skilled Cell Phone Forensics Examiner have a wealth of skills and information to help with your case. We can provide an unbiased, independent analysis of the data on your cell phones and GPS units. We have multiple certifications and utilize multiple programs and systems to retrieve the data including the Cellebrite UFED (Universal Forensic Extraction Device) Logical Unit, the Cellebrite Physical Pro and Susteen SecureView. These systems allow us to access thousands of the cell phones on the market today and many of the GPS units.</p>
-                        <p id='point1'>Some of the data we can extract from cell phones & GPS units can include:</p>
+                        <p>Some of the data we can extract from cell phones & GPS units can include:</p>
                     </div>
                     <div className='container secondarySection'>
                         <div>

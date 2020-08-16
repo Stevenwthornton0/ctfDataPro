@@ -11,7 +11,8 @@ class Header extends React.Component {
             documents: false,
             services: false,
             contact: false,
-            photos: false
+            photos: false,
+            drop: false,
         }
     }
 
@@ -69,34 +70,14 @@ class Header extends React.Component {
         }) 
     }
 
+    dropDown = () => {
+        this.setState({
+            drop: !this.state.drop
+        })
+    }
+
     
     render() {
-        const { pathname } = window.location;
-        let home = null;
-        let services = null;
-        let documents = null;
-        let contact = null;
-        let photos = null;
-
-        if (pathname === '/') {
-            home = true
-        } else { home = false }
-
-        if (pathname === '/services') {
-            services = true
-        } else { services = false }
-
-        if (pathname === '/documents') {
-            documents = true;
-        } else { documents = false }
-
-        if (pathname === '/contact') {
-            contact = true;
-        } else { contact = false }
-
-        if (pathname === '/photos') {
-            photos = true;
-        } else { photos = false }
         
         return(
             <div className='top'>
@@ -104,17 +85,35 @@ class Header extends React.Component {
 
                 <div className='navBar'>
 
-                    {home || this.state.home ? <Link onClick={this.onClickHome} className='outline clicked' to='/'>Home</Link> : <Link onClick={this.onClickHome} to='/'>Home</Link>}
+                    {this.state.home 
+                        ? <Link onClick={this.onClickHome} className='outline clicked' to='/'>Home</Link> 
+                        : <Link onClick={this.onClickHome} to='/'>Home</Link>}
 
-                    {this.state.services  ? <Link onClick={this.onClickServices} className='outline clicked' to='/services'>Services</Link> : <Link onClick={this.onClickServices} to='/services'>Services</Link>}
+                    {/* {this.state.services  
+                        ? <Link onClick={this.onClickServices} className='outline clicked' to='/services'>Services</Link>
+                        : <Link onClick={this.onClickServices} to='/services'>Services</Link>} */}
 
-                    {this.state.documents ? <Link onClick={this.onClickDocuments} className='outline clicked' to='documents'>Documents</Link> : <Link onClick={this.onClickDocuments} to='documents'>Documents</Link>}
+                    <div onClick={this.dropDown} className='dropDown'>
+                        <p>Services</p>
+                        {this.state.drop && <div id='dropContainer'>
+                            <Link to='/services/cellphone'>Cell Phone Forensics</Link>
+                            <Link to='/services/gps'>GPS Forensics</Link>
+                            <Link to='/services/celltower'>Cell Tower Analysis</Link>
+                            <Link to='/services/password'>Password Recovery</Link>
+                        </div>}
+                    </div>
 
-                    {this.state.contact ? <Link onClick={this.onClickContact} className='outline clicked' to='/contact'>Contact</Link> : <Link onClick={this.onClickContact} to='/contact'>Contact</Link>}
+                    {this.state.documents 
+                        ? <Link onClick={this.onClickDocuments} className='outline clicked' to='documents'>Documents</Link> 
+                        : <Link onClick={this.onClickDocuments} to='documents'>Documents</Link>}
 
-                    {this.state.photos ? <Link onClick={this.onClickPhotos} className='outline clicked' to='/photos'>Photos</Link> : <Link onClick={this.onClickPhotos} to='/photos'>Photos</Link>}
+                    {this.state.contact 
+                        ? <Link onClick={this.onClickContact} className='outline clicked' to='/contact'>Contact</Link>
+                        : <Link onClick={this.onClickContact} to='/contact'>Contact</Link>}
 
-                    <div className='animation start-home'></div>
+                    {this.state.photos 
+                        ? <Link onClick={this.onClickPhotos} className='outline clicked' to='/photos'>Photos</Link> 
+                        : <Link onClick={this.onClickPhotos} to='/photos'>Photos</Link>}
                     
                 </div>
             </div>
