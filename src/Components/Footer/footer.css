@@ -10,12 +10,12 @@
 
 .footer * {
   padding: 3em 2em;
+  color: white;
 }
 
 .contact {
   font-size: 20px;
   padding: 2.5em 2em;
-  color: white;
 }
 
 .contact:hover {
