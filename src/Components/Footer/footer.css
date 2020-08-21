@@ -2,6 +2,25 @@
 .footer {
   background-color: #3b668e;
   height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1em;
 }
+
+.footer * {
+  padding: 3em 2em;
+}
+
+.contact {
+  font-size: 20px;
+  padding: 2.5em 2em;
+  color: white;
+}
+
+.contact:hover {
+  background-color: #4f7da8;
+}
+
 
 

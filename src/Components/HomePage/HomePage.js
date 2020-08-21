@@ -5,9 +5,15 @@ import phone from '../../Photos/Phone.jpg';
 import phone2 from '../../Photos/Phone2.jpg';
 import tower from '../../Photos/tower.jpg';
 import password from '../../Photos/Password.png';
+import ClickedContext from '../../contexts/context';
 
 
 class HomePage extends React.Component {
+    static contextType = ClickedContext
+
+    componentDidMount() {
+        this.context.onClickHome();
+    }
 
     sectionClick1 = () => {
         const elmnt = document.getElementById('point1');

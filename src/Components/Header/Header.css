@@ -1,4 +1,5 @@
 .top {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6,7 +7,7 @@
     height: 100px;
     background-color: #3b668e;
     font-weight: 400;
-    z-index: -2;
+    z-index: 3;
 }
 
 .logo {
@@ -26,7 +27,7 @@
     justify-content: space-around;
 }
 
-.navBar > a, .navBar p, .navBar div {
+.navBar > a, .navBar p, .navBar .dropDown {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -36,7 +37,7 @@
     z-index: 0;
 }
 
-.navBar > a:hover, .navBar p:hover, .navBar > div:hover {
+.navBar > a:hover, .navBar p:hover, .navBar > .dropDown:hover {
     color: #000b11;
     transition: ease .2s;
     cursor: pointer;
@@ -48,28 +49,49 @@
     pointer-events: none;
 }
 
+.clicked {
+    pointer-events: all;
+}
+
 .dropDown > p {
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 3;
 }
 
 #dropContainer {
-    z-index: 2;
+    background-color: #3b668e;
+    z-index: 3;
     position: absolute;
     display: flex;
-    flex-direction: column;
-    width: 20%;
-    height: fit-content;
-    margin: 0;
-    margin-top: 40px;
+    flex-direction: column; 
+    margin-top: 2px;
+    margin-left: 20px;
+    width: 200%;
+    box-shadow: 6px 6px 20px rgba(0,0,0,.35);
 }
 
 #dropContainer * {
     margin: 0;
-    padding: 20px 10px;
+    padding: 25px 40px;
+    color: white;
 }
 
+#dropContainer *:hover {
+    background-color: #4f7da8;
+}
 
+.dropDown > div {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -36px;
+}
+
+.noOutline {
+    border: 1px solid transparent;
+}
 
 
 
