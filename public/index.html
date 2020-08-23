@@ -41,6 +41,22 @@
     </style> -->
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>React App</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init('user_cTgQt5HKvf1Z1JTKod0Gp');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate the contact number value
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('steven_gmail', 'contact_form', this);
+            });
+        }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

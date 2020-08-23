@@ -1,0 +1,92 @@
+.contactContainer {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.contactContainer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+form input, form textarea{
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #bdbdbd;
+    resize: none;
+    line-height: 1.5em;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+form .submit {
+    background-color: #3b668e;
+    color: white;
+    font-size: 20px;
+}
+
+form .submit:hover {
+    cursor: pointer;
+    background-color: #4f7da8;
+}
+
+.contactContainer > h2 {
+    font-size: 40px;
+    font-weight: 500;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.spinner {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 180px;
+}
+
+.response {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    font-size: 20px;
+    line-height: 4em;
+    color: white;
+    background-color: #3b668e;
+    padding: 50px 100px;
+}
+
+.response h2 {
+    font-weight: 600;
+}
+
+.response p {
+    font-weight: 300;
+}
+
+.responseContainer {
+    position: relative;
+}
+
+.responseContainer:before {
+    background-color: gray;
+    content: "";
+    height: 100%;
+    left: 0;
+    max-width: 710px; /* max-width of <img> + 50px offset */
+    position: absolute;
+    top: -30px;
+    left: 400px;
+    width: calc(100% + 50px);
+    z-index: -1;
+}
+

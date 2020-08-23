@@ -83,9 +83,9 @@ class Header extends React.Component {
                         ? <Link onClick={context.onClickContact} className='outline' to='/contact'>Contact</Link>
                         : <Link onClick={context.onClickContact} className='noOutline' to='/contact'>Contact</Link>}
 
-                    {context.photos 
+                    {/* {context.photos 
                         ? <Link onClick={context.onClickPhotos} className='outline' to='/photos'>Photos</Link> 
-                        : <Link onClick={context.onClickPhotos} className='noOutline' to='/photos'>Photos</Link>}
+                        : <Link onClick={context.onClickPhotos} className='noOutline' to='/photos'>Photos</Link>} */}
                     
                 </div>
             </div>

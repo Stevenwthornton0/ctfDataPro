@@ -55,14 +55,14 @@ class HomePage extends React.Component {
 
                 <div className='belowImageOffset background3 primarySection' id='cellPhone'>
                     <div className="container">
-                        <h1 id='point1'>Cell Phone & GPS Forensics</h1>
+                        <h1 id='point1'><Link to={'/services/cellphone'}>Cell Phone </Link> & <Link to={'/services/GPS'}>GPS Forensics</Link></h1>
                         <div className='underline'/>
                         <p>Our team of skilled Cell Phone Forensics Examiner have a wealth of skills and information to help with your case. We can provide an unbiased, independent analysis of the data on your cell phones and GPS units. We have multiple certifications and utilize multiple programs and systems to retrieve the data including the Cellebrite UFED (Universal Forensic Extraction Device) Logical Unit, the Cellebrite Physical Pro and Susteen SecureView. These systems allow us to access thousands of the cell phones on the market today and many of the GPS units.</p>
                         <p>Some of the data we can extract from cell phones & GPS units can include:</p>
                     </div>
                     <div className='container secondarySection'>
                         <div>
-                            <h3>Cell Phones</h3>
+                            <h3>Cell Phone</h3>
                             <ul>
                                 <li>SMS (text messages)</li>
                                 <li>Pictures</li>
@@ -89,7 +89,7 @@ class HomePage extends React.Component {
 
                 <div className='background4 primarySection' id='cellTower'>
                     <div className="container clearfix">
-                        <h1>Cell Tower Analysis</h1>
+                        <h1><Link to={'/services/celltower'}>Cell Tower Analysis</Link></h1>
                         <div className='underline1'></div>
                         <p>Our Cell Tower Analysis services helps you with the task of reviewing the cell tower records and making sense out of something that at times can be very confusing. We can assist in isolating the items that are of use to your case and helping you fit those into the proper perspective.</p>
                     </div>
@@ -97,7 +97,7 @@ class HomePage extends React.Component {
 
                 <div className='background3 primarySection' id='passwordRec'>
                     <div className="container">
-                        <h1>Password Recovery</h1>
+                        <h1><Link to={'/services/password'}>Password Recovery</Link></h1>
                         <div className='underline'></div>
                         <div className="row">
                             <div className="col-50">
@@ -120,7 +120,7 @@ class HomePage extends React.Component {
                 <div className='background4 primarySection' id='cellTower'>
                     <div className="container clearfix row">
                         <div className='col-33'>
-                            <Link to='/services'>
+                            <Link to='/services/cellphone'>
                                 <div className='phoneWrap2'>
                                     <img className='navImg' src={phone2}></img>
                                 </div>
@@ -128,7 +128,7 @@ class HomePage extends React.Component {
                             </Link>
                         </div>
                         <div className='col-33'>
-                            <Link to='/services'>
+                            <Link to='/services/celltower'>
                                 <div className='phoneWrap2'>
                                     <img className='navImg' src={tower}></img>
                                 </div>
@@ -136,7 +136,7 @@ class HomePage extends React.Component {
                             </Link>
                         </div>
                         <div className='col-33'>
-                            <Link to='/services'>
+                            <Link to='/services/password'>
                                 <div className='phoneWrap2'>
                                     <img className='navImg' src={password}></img>
                                 </div>

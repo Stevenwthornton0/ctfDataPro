@@ -20,6 +20,7 @@
     position: absolute;
     top: -50px;
     width: calc(100% + 50px);
+    border-radius: 3px;
 }
 
 .phone {
@@ -30,6 +31,7 @@
     z-index: 1;
     display: block; /* Removes the default bottom "margin" that <img> tags have */
     position: relative; /* Pops the z-index to be above the absolute positioned .phoneWrap:before pseudo-element */
+    border-radius: 3px;
 }
 
 .homeText {
@@ -68,11 +70,10 @@
 
 .underline1 {
     width: 30%;
-    border-bottom: 1px solid #3b668e;
+    border-bottom: 1px solid black;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    /* margin-bottom: 10px; */
 }
 
 .secondarySection {
@@ -109,12 +110,14 @@ ul {
     top: -20px;
     left: 20px;
     width: calc(100% + 50px);
+    border-radius: 3px;
 }
 
 .navImg {
     width: 170.66px;
     height: auto;
     box-shadow: 12px 12px 48px rgba(0,0,0,.35);
+    border-radius: 3px;
     z-index: 1;
     display: block; /* Removes the default bottom "margin" that <img> tags have */
     position: relative; /* Pops the z-index to be above the absolute positioned .phoneWrap:before pseudo-element */
