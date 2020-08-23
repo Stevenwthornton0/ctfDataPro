@@ -53,15 +53,15 @@ class Contact extends React.Component {
                     <div className='contactContainer'>
                         <h2>Contact Us</h2>
                         <form id="contact-form" onSubmit={this.thankYou}>
-                            <input type="hidden" name="contact_number" />
+                            <input type="hidden" name="contact_number"/>
                             <label>Name</label>
-                            <input type="text" name="user_name" placeholder="John Smith"/>
+                            <input type="text" name="user_name" placeholder="John Smith" required/>
                             <label>Email</label>
-                            <input type="email" name="user_email" placeholder="example@email.com"/>
+                            <input type="email" name="user_email" placeholder="example@email.com" required/>
                             <label>Phone Number</label>
-                            <input type="phone" name="user_phone" placeholder="123-456-7890"/>
+                            <input type="phone" name="user_phone" placeholder="123-456-7890" required/>
                             <label>Message</label>
-                            <textarea name="message" rows='6' placeholder="Type your email here"></textarea>
+                            <textarea name="message" rows='6' placeholder="Type your email here" required></textarea>
                             <input className='submit' type="submit" value="Send" />
                         </form>
                     </div>
