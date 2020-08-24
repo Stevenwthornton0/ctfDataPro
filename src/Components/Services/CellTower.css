@@ -1,0 +1,27 @@
+.cellTower {
+    width: 60%;
+    margin: 60px auto 90px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cellTower h1 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.cellTower p {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.cellTower .underline1 {
+    width: 60%
+}

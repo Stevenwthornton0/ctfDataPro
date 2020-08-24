@@ -1,0 +1,26 @@
+.GPS {
+    width: 60%;
+    margin: 60px auto 90px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.GPS h1 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+
+.GPS p {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.GPS .underline1 {
+    width: 60%
+}

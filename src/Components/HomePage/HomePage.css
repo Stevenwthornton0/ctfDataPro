@@ -88,7 +88,7 @@
     font-weight: 500;
 }
 
-ul {
+ul, ol {
     font-size: 20px;
     margin-left: 20px;
     margin-top: 12px;
